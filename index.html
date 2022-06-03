@@ -113,32 +113,32 @@
 									Add .external for an external link!
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
+									<li id="home-nav" class="active"><!-- HOME -->
 										<a href="#home">
 											HOME
 										</a>
 									</li>
-									<li><!-- SERVICES -->
+									<li id="services-nav"><!-- SERVICES -->
 										<a href="#services">
 											SERVICES
 										</a>
 									</li>
-									<li><!-- WORK -->
-										<a href="#work">
+									<li id="portfolio-nav"><!-- PORTFOLIO -->
+										<a href="#portfolio">
 											PORTFOLIO
 										</a>
 									</li>
-									<li><!-- NEWS -->
+									<li id="news-nav"><!-- NEWS -->
 										<a href="#news">
 											NEWS
 										</a>
 									</li>
-									<li><!-- CLIENTS -->
+									<li id="clients-nav"><!-- CLIENTS -->
 										<a href="#clients">
 											CLIENTS
 										</a>
 									</li>
-									<li><!-- CONTACT -->
+									<li id="contact-nav"><!-- CONTACT -->
 										<a href="#contact">
 											CONTACT
 										</a>
@@ -413,7 +413,7 @@
 							<img class="img-fluid" src="assets/images/_smarty/AdobeStock_162479912.jpeg" alt="img" />
 							<h3 class="mt-10">Projects & Awards</h3>
 							<p>Rocket Elevators has received numerous awards for our innovative designs for sustainable elevators.</p>
-							<a href="#work" class="btn btn-info">READ MORE</a>
+							<a href="#portfolio" class="btn btn-info">READ MORE</a>
 						</div>
 
 						<div class="col-sm-4">
@@ -461,7 +461,7 @@
 
 
 			<!-- PORTFOLIO -->
-			<section id="work">
+			<section id="portfolio">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -894,14 +894,14 @@
 
 
 
-			<!-- Testimonials -->
+			<!-- Team -->
 			<section class="section-xs dark">
 				<div class="container">
 
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
 						<div class="testimonial">
 							<figure>
-								<img class="rounded" src="assets/images/_smarty/timothyweverphoto.png" alt="" />
+								<img class="rounded" src="assets/images/_smarty/CEO.jpg" alt="" />
 							</figure>
 							<div class="testimonial-content p-0">
 								<p class="lead">"Rocket Elevators has had hundreds of clients across America, <br> 
@@ -914,7 +914,7 @@
 						</div>
 						<div class="testimonial">
 							<figure>
-								<img class="rounded" src="assets/images/_smarty/sashaimage.jpg" alt="" />
+								<img class="rounded" src="assets/images/_smarty/employee-of-the-month.jpg" alt="" />
 							</figure>
 							<div class="testimonial-content p-0">
 								<p class="lead">"After working for many elevator companies, <br>
@@ -1101,27 +1101,27 @@
 
 					<ul class="row clients-dotted list-inline">
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/logo1squarebmw.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/logo2turtwig.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/logoproper3.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/10.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/logo5chrome.png" alt="client" />
 							</a>
 						</li>
@@ -1131,32 +1131,32 @@
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/7discord.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/logo8currents.webp" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/9sam.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/12.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/11solary.png" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a href="#">
+							<a >
 								<img class="img-fluid" src="assets/images/_smarty/logo12loupedeck.png" alt="client" />
 							</a>
 						</li>
@@ -1240,54 +1240,57 @@
 
 									<div class="row">
 											<div class="col-md-4">
-												<label for="contact:name">Full Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+												<label for="name">Full Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="name">
 											</div>
 											<div class="col-md-4">
-												<label for="contact:email">E-mail Address *</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+												<label for="email">E-mail Address *</label>
+												<input required type="email" value="" class="form-control" name="contact[email][required]" id="email">
 											</div>
 											<div class="col-md-4">
-												<label for="contact:phone">Phone</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+												<label for="phone">Phone</label>
+												<input type="text" value="" class="form-control" name="contact[phone]" id="phone">
 											</div>
 									</div>
 									<div class="row">
 											<div class="col-md-8">
-												<label for="contact:subject">Business Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<label for="subject">Business Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="company_name">
 											</div>
 											<div class="col-md-8">
-												<label for="contact:project-name">Project Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[project-name][required]" id="contact:project-name">
+												<label for="project-name">Project Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[project-name][required]" id="project_name">
 											</div>
+
+											<div class="row">
+												<div class="col-md-12">
+													<label for="project-description">Project Description *</label>
+													<textarea required maxlength="10000" rows="8" class="form-control" name="contact[project-description]" id="project_description"></textarea>
+												</div>
+											</div>
+
 											<div class="col-md-4">
 												<label for="contact_department">Department</label>
-												<select class="form-control pointer" name="contact[department]">
+												<select class="form-control pointer" name="contact[department]" id="department">
 													<option value="">--- Select ---</option>
 													<option value="Marketing">Residential</option>
 													<option value="Webdesign">Corporate</option>
 												</select>
 											</div>
 									</div>
-									<div class="row">
-										<div class="col-md-12">
-											<label for="contact:project-description">Project Description *</label>
-											<textarea required maxlength="10000" rows="8" class="form-control" name="contact[project-description]" id="contact:project-description"></textarea>
-										</div>
-									</div>
+								
 									<div class="row">
 											<div class="col-md-12">
-												<label for="contact:message">Message *</label>
-												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+												<label for="message">Message *</label>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="message"></textarea>
 											</div>
 									</div>
 									<div class="row">
 											<div class="col-md-12">
-												<label for="contact:attachment">File Attachment</label>
+												<label for="attachment">File Attachment</label>
 
 												<!-- custom file upload -->
-												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="attachment" data-btn-text="Select a File" />
 												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 
 											</div>
@@ -1351,6 +1354,68 @@
 
 		</div>
 		<!-- /wrapper -->
+		
+		<!-- FOOTER -->
+<footer id="footer">
+	<div class="container">
+
+
+		<div class="row">
+
+			<!-- col #1 -->
+			<div class="col-md-8">
+
+				<h3 class="letter-spacing-1">WHY US?</h3>
+
+				<!-- Small Description -->
+				<p>
+					We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
+
+				</p>
+				<h2>(418) 555-1234</h2>
+			</div>
+			<!-- /col #1 -->
+
+			<!-- col #2 -->
+			<div class="col-md-4">
+				<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+				<!-- Newsletter Form -->
+				<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+				<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+						<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+						<span class="input-group-btn">
+							<button class="btn btn-success" type="submit">Subscribe</button>
+						</span>
+					</div>
+				</form>
+				<!-- /Newsletter Form -->
+
+
+			</div>
+			<!-- /col #2 -->
+
+		</div>
+
+
+	</div>
+
+	<div class="copyright">
+		<div class="container">
+			<ul class="float-right m-0 list-inline mobile-block">
+				<li><a href="#">Terms &amp; Conditions</a></li>
+				<li>&bull;</li>
+				<li><a href="#">Privacy</a></li>
+			</ul>
+			&copy; All Rights Reserved, Rocket Elevators
+		</div>
+	</div>
+
+</footer>
+<!-- /FOOTER -->
 
 
 		<!-- SCROLL TO TOP -->

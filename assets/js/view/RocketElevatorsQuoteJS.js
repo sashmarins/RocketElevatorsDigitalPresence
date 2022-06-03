@@ -1,4 +1,5 @@
 jQuery(document).ready(function () {
+
     $('input[type="radio"]').click(function () {
         if ($(this).attr("value") == "Residential") {
             $('#ElevatorsHTMLOutput').val('');
@@ -25,7 +26,7 @@ jQuery(document).ready(function () {
                 });
                 BasementInput.on('input', function () {
                     ResidentialShafts.val(((ApartmentsInput.val() / 6) * (Math.floor(((parseFloat(FloorInput.val()) + parseFloat(BasementInput.val()))) / 20) + 1)).toFixed())
-                });
+                });                
             });
         }
         else if ($(this).attr("value") == "Commercial") {
