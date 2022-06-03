@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Hotel | Smarty Packs</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/pack-hotel.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/custom-forms-v2.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+	-->
+	<body class="smoothscroll enable-animation">
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+			-->
+			<div id="header" class="navbar-toggleable-md clearfix transparent sticky dark disable-uppercase">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						
+
+
+						<!-- Logo -->
+						<a class="logo float-left" href="index-onepage-construction.html">
+							<img src="assets/images/_smarty/R2.png" alt="" />
+						</a>
+
+
+
+						<!-- 
+							Top Nav 
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-color">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+
+									+ MENU EFFECTS
+										.nav-animate-fadeIn
+										.nav-animate-fadeInUp
+										.nav-animate-bounceIn
+										.nav-animate-bounceInUp
+										.nav-animate-flipInX
+										.nav-animate-flipInY
+										.nav-animate-zoomIn
+										.nav-animate-slideInUp
+
+										.nav-hover-animate 	= animate text on hover
+
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-hover-animate nav-animate-fadeIn">
+									<li>
+										<a  class="external" href="index-onepage-construction.html">
+											HOME
+										</a>
+										
+									</li>
+									<li><!-- Corporate -->
+										<a class="external" href="corporate.html">
+											CORPORATE
+										</a>
+									</li>
+									<li><!-- Residential -->
+										<a class="external" href="residential.html">
+											RESIDENTIAL
+										</a>
+									</li>
+									
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark		= dark page header
+					.light		= light page header
+			-->
+			<section class="page-header page-header-md b-0 dark" 
+				data-background-delay="5000" 
+				data-background-fade="1000" 
+				data-background="
+					assets/images/_smarty/elevatorquoteform.jpeg
+			">
+
+				<span class="overlay dark-5 raster"><!-- dark overlay [1 to 9 opacity] --></span>
+
+
+				<div class="display-table">
+					<div class="display-table-cell vertical-align-middle">
+						
+						<div class="container text-xs-center">
+
+							<h1 class="fw-400 wow fadeIn" data-wow-delay="0.2s">Get a Quote Today!</h1>
+
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+			<section class="b-0">
+				<div class="container">
+
+					<div>
+
+						<div class="col-lg-7 order-lg-2"  style="margin: auto;">
+							
+							
+
+							<div>
+
+
+								
+								<!--
+									MESSAGES
+									
+										How it works?
+										The form data is posted to php/contact.php where the fields are verified!
+										php.contact.php will redirect back here and will add a hash to the end of the URL:
+											#alert_success 		= email sent
+											#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+											#alert_mandatory	= email not sent - required fields empty
+											Hashes are handled by assets/js/contact.js
+
+										Form data: required to be an array. Example:
+											contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+											Also, add `required` to input fields if is a mandatory field. 
+											Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+										PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+													 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+										WARNING! Do not change the `email` and `name`!
+													contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+													contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+								-->
+
+								<!-- Alert Success -->
+								<div id="alert_success" class="alert alert-success mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>Thank You!</strong> Your message successfully sent!
+								</div><!-- /Alert Success -->
+
+
+								<!-- Alert Failed -->
+								<div id="alert_failed" class="alert alert-danger mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>[SMTP] Error!</strong> Internal server error!
+								</div><!-- /Alert Failed -->
+
+
+								<!-- Alert Mandatory -->
+								<div id="alert_mandatory" class="alert alert-danger mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+								</div><!-- /Alert Mandatory -->
+
+
+								<!-- form action="php/contact.php" method="post" enctype="multipart/form-data" -->
+									<fieldset>
+										<input type="hidden" name="action" value="contact_send" />
+										
+										<p><b>Building Type:</b></p>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" value="Residential" id="flexRadioResidential">
+											<label class="form-check-label" for="flexRadioResidential">
+											  Residential
+											</label>
+										  </div>
+										  <div class="form-check">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" value="Commercial" id="flexRadioCommercial">
+											<label class="form-check-label" for="flexRadioCommercial">
+											  Commercial
+											</label>
+										  </div>
+										  <div class="form-check">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" value="Corporate" id="flexRadioCorporate">
+											<label class="form-check-label" for="flexRadioCorporate">
+											  Corporate
+											</label>
+										  </div>
+										  <div class="form-check">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" value="Hybrid" id="flexRadioHybrid">
+											<label class="form-check-label" for="flexRadioHybrid">
+											  Hybrid
+											</label>
+										  </div><br>
+										  <!-- id="" -->
+															
+											<div class="col-md-12" id="apartments" style="display:none">
+												<label for="phone">Number of Apartments</label>
+												<input type="text" id="apartmentsinput" value="" class="form-control" name="contact[apartments]" >
+											</div>
+
+											<div class="col-md-12" id="floors" style="display:none">
+												<label for="phone">Number of Floors (EXCLUDING BASEMENTS)</label>
+												<input type="text" id="floorsinput" value="" class="form-control" name="contact[floors]" >
+											</div>
+
+											<div class="col-md-12" id="basements" style="display:none">
+												<label for="phone">Number of Basements</label>
+												<input type="text" id="basementsinput" value="" class="form-control" name="contact[basements]" >
+											</div>
+																					
+											<div class="col-md-12" id="businesses" style="display:none">
+												<label for="phone">Number of Distinct Businesses</label>
+												<input type="text" id="businessesinput" value="" class="form-control" name="contact[businesses]" >
+											</div>
+
+											<div class="col-md-12" id="parking" style="display:none">
+												<label for="phone">Number of Parking Spaces</label>
+												<input type="text" id="parkinginput" value="" class="form-control" name="contact[parking]" >
+											</div>
+
+											<div class="col-md-12" id="cages" style="display:none">
+												<label for="phone">Number of Cages</label>
+												<input type="text" id="cagesinput" value="" class="form-control" name="contact[cages]" >
+											</div>
+																				
+											<div class="col-md-12" id="companies" style="display:none">
+												<label for="phone">Number of Companies</label>
+												<input type="text" id="companiesinput" value="" class="form-control" name="contact[companies]" >
+											</div>
+
+											<div class="col-md-12" id="occupants" style="display:none">
+												<label for="phone">Maximum Number of Occupants Per Floor</label>
+												<input type="text" id="occupantsinput" value="" class="form-control" name="contact[occupants]" >
+											</div>
+																					
+											<div class="col-md-12" id="hours" style="display:none">
+												<label for="phone">Hours of Operation</label>
+												<input type="text" id="hoursinput" value="" class="form-control" name="contact[hours]" >
+											</div>
+
+											<p><b>Elevator Type:</b></p>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault2" value="Standard" id="RadioStandard">
+												<label class="form-check-label" for="RadioStandard">
+												  Standard
+												</label>
+											  </div>
+											  <div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault2" value="Premium" id="RadioPremium">
+												<label class="form-check-label" for="RadioPremium">
+												  Premium
+												</label>
+											  </div>
+											  <div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault2" value="Excelium" id="RadioExcelium">
+												<label class="form-check-label" for="RadioExcelium">
+												  Excelium
+												</label>
+										<br>
+												<div class="col-md-12" id="PricePerElevator">
+													<label for="phone">Price Per Elevator</label>
+													<input type="text" id="PricePerElevatorOutput" value="" class="form-control" name="PricePerElevator" readonly>
+												</div>
+												<div class="col-md-12" id="InstallationFee">
+													<label for="phone">Installation Fee</label>
+													<input type="text" id="InstallationFeeOutput" value="" class="form-control" name="InstallationFee" readonly>
+												</div>
+												<div class="col-md-12" id="ResidentialElevatorsHTML" >
+													<label for="phone">Elevators Required</label>
+													<input type="text" id="ElevatorsHTMLOutput" value="" class="form-control" name="ResidentialElevatorsHTML" readonly>
+												</div>
+
+
+
+												<div class="col-md-12" id="TotalElevatorCost">
+													<label for="phone">Cost of All Elevators</label>
+													<input type="text" id="TotalElevatorCostOutput" value="" class="form-control" name="TotalElevatorCost" readonly>
+												</div>
+												<div class="col-md-12" id="InstallationCost">
+													<label for="phone">Installation Cost</label>
+													<input type="text" id="InstallationCostOutput" value="" class="form-control" name="InstallationCost" readonly>
+												</div>
+												<div class="col-md-12" id="FinalPrice">
+													<label for="phone">Total Cost</label>
+													<input type="text" id="FinalPriceOutput" value="" class="form-control" name="FinalPrice" readonly>
+												</div>
+												<div class="col-md-12" id="HiddenFee" style="display:none">
+													<label for="phone">Installation Fee</label>
+													<input type="text" id="HiddenFeeOutput" value="" class="form-control" name="HiddenFee" readonly>
+												</div>
+										
+										</div>
+
+									</fieldset>
+
+									<div class="row">
+										<div class="col-md-12">
+											<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+										</div>
+									</div>
+								</form>
+
+
+							</div>
+
+
+						</div>
+
+
+						
+
+						</div>
+
+
+					</div>
+
+
+
+				</div>
+			</section>
+
+
+
+
+
+	<!-- FOOTER -->
+	<footer id="footer">
+		<div class="container">
+
+
+			<div class="row">
+
+				<!-- col #1 -->
+				<div class="col-md-8">
+
+					<h3 class="letter-spacing-1">WHY US?</h3>
+
+					<!-- Small Description -->
+					<p>
+						Rocket Elevators is the leading company when it comes to innovation in residential and commercial elevator installations.
+					</p>
+					<h2>(800) 887-2497</h2>
+				</div>
+				<!-- /col #1 -->
+
+				<!-- col #2 -->
+				<div class="col-md-4">
+					<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+					<!-- Newsletter Form -->
+					<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+					<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+							<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+							<span class="input-group-btn">
+								<button class="btn btn-danger" type="submit">Subscribe</button>
+							</span>
+						</div>
+					</form>
+					<!-- /Newsletter Form -->
+
+
+				</div>
+				<!-- /col #2 -->
+
+			</div>
+
+
+		</div>
+
+		<div class="copyright">
+			<div class="container">
+				<ul class="float-right m-0 list-inline mobile-block">
+					<li><a href="#">Terms &amp; Conditions</a></li>
+					<li>&bull;</li>
+					<li><a href="#">Privacy</a></li>
+				</ul>
+				&copy; All Rights Reserved, Rocket Elevators
+			</div>
+		</div>
+
+	</footer>
+	<!-- /FOOTER -->
+
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<script src="assets/js/view/pack_hotel.js"></script>
+		<script src="assets/js/view/RocketElevatorsQuoteJS.js"></script>
+
+		<!-- 
+			GMAP.JS 
+			http://hpneo.github.io/gmaps/
+		-->
+		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
+		<script src="assets/plugins/gmaps.js"></script>
+		<script>
+
+			jQuery(document).ready(function(){
+
+				/**
+					@BASIC GOOGLE MAP
+				**/
+				var map2 = new GMaps({
+					div: '#map2',
+					lat: -12.043333,
+					lng: -77.028333,
+					scrollwheel: false
+				});
+
+				var marker = map2.addMarker({
+					lat: -12.043333,
+					lng: -77.028333,
+					title: 'Company, Inc.'
+				});
+
+			});
+
+		</script>
+
+
+	</body>
+</html>
